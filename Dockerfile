@@ -1,4 +1,4 @@
-FROM docker.io/python:3
+FROM docker.io/python:latest
 LABEL maintainer="toughIQ@gmail.com"
 
 RUN adduser --shell /bin/bash fishtest
