@@ -1,6 +1,10 @@
 FROM docker.io/python:3
 LABEL maintainer="toughIQ@gmail.com"
 
+RUN adduser --shell /bin/bash fishtest
+USER fishtest
+
+
 WORKDIR /fishtest
 RUN git clone https://github.com/glinscott/fishtest.git
 
