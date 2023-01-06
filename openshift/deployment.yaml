@@ -37,7 +37,8 @@ spec:
         allowPrivilegeEscalation: false
         runAsNonRoot: true
         capabilities:
-          drop: ["ALL"]
+          drop:
+            - all
         seccompProfile:
           type: RuntimeDefault
       schedulerName: default-scheduler
