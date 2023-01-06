@@ -34,8 +34,7 @@ spec:
             allowPrivilegeEscalation: false
             runAsNonRoot: true
             capabilities:
-              drop:
-                - all
+              drop: ["ALL"]
             seccompProfile:
               type: RuntimeDefault
       restartPolicy: Always
