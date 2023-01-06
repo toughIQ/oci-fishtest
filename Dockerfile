@@ -3,13 +3,14 @@ LABEL maintainer="toughIQ@gmail.com"
 
 RUN mkdir /fishtest
 RUN useradd -r -s /bin/bash -g root -G root -u 1000 fishtest
-RUN chgrp -R 0 /fishtest && \
-    chmod -R g=u /fishtest
     
-USER fishtest
-
 WORKDIR /fishtest
 RUN git clone https://github.com/glinscott/fishtest.git
+
+RUN chgrp -R 0 /fishtest && \
+    chmod -R g=u /fishtest
+
+USER fishtest
 
 CMD ["bash", "-c", "python3 fishtest/worker/worker.py $USERNAME $PASSWORD --concurrency $CORES"]
 
