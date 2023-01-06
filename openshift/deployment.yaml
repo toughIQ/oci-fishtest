@@ -41,14 +41,6 @@ spec:
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
-      securityContext:
-        allowPrivilegeEscalation: false
-        runAsNonRoot: true
-        capabilities:
-          drop:
-            - all
-        seccompProfile:
-          type: RuntimeDefault
       schedulerName: default-scheduler
   strategy:
     type: RollingUpdate
