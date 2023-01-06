@@ -36,6 +36,10 @@ spec:
       securityContext:
         allowPrivilegeEscalation: false
         runAsNonRoot: true
+        capabilities:
+          drop: ["ALL"]
+        seccompProfile:
+          type: RuntimeDefault
       schedulerName: default-scheduler
   strategy:
     type: RollingUpdate
