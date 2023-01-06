@@ -1,5 +1,5 @@
 # oci-fishtest
-StockFish fishtest worker - Chess
+StockFish FishTest worker - Chess
 
 Project: https://github.com/glinscott/fishtest
 
