@@ -2,8 +2,10 @@ FROM docker.io/python:latest
 LABEL maintainer="toughIQ@gmail.com"
 
 RUN adduser --shell /bin/bash fishtest
-USER fishtest
+RUN mkdir /fishtest
+RUN chmod -R 777 /fishtest
 
+USER fishtest
 
 WORKDIR /fishtest
 RUN git clone https://github.com/glinscott/fishtest.git
