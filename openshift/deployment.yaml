@@ -35,6 +35,7 @@ spec:
       dnsPolicy: ClusterFirst
       securityContext:
         allowPrivilegeEscalation: false
+        runAsNonRoot: true
       schedulerName: default-scheduler
   strategy:
     type: RollingUpdate
