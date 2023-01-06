@@ -2,7 +2,7 @@ FROM docker.io/python:latest
 LABEL maintainer="toughIQ@gmail.com"
 
 RUN mkdir /fishtest
-RUN useradd -r -s /bin/bash -g root -u 1000 fishtest
+RUN useradd -r -s /bin/bash -g root -G root -u 1000 fishtest
 RUN chown -R fishtest:root /fishtest && \
     chgrp -R 0 /fishtest && \
     chmod -R 775 /fishtest
