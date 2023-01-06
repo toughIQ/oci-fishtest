@@ -1,9 +1,15 @@
 FROM docker.io/python:latest
 LABEL maintainer="toughIQ@gmail.com"
 
-RUN adduser --shell /bin/bash fishtest
-RUN mkdir /fishtest
-RUN chmod -R 777 /fishtest
+RUN useradd -rm -d /fishtest -s /bin/bash -g root -u 1000 fishtest
+RUN chown -R fishtest:root /fishtest && \
+    chgrp -R 0 /fishtest && \
+    chmod -R 775 /fishtest
+    
+    
+#RUN adduser --shell /bin/bash fishtest
+#RUN mkdir /fishtest
+#RUN chmod -R 777 /fishtest
 
 USER fishtest
 
