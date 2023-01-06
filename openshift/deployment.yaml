@@ -33,7 +33,8 @@ spec:
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
       dnsPolicy: ClusterFirst
-      securityContext: {}
+      securityContext:
+        allowPrivilegeEscalation: false
       schedulerName: default-scheduler
   strategy:
     type: RollingUpdate
