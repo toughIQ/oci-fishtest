@@ -1,8 +1,8 @@
 FROM docker.io/python:latest
 LABEL maintainer="toughIQ@gmail.com"
 
-RUN mkdir /fishtest
-RUN useradd -r -s /bin/bash -g root -G root -u 1000 fishtest
+RUN mkdir /fishtest && \
+    useradd -r -s /bin/bash -g root -G root -u 1000 fishtest
     
 WORKDIR /fishtest
 RUN git clone https://github.com/glinscott/fishtest.git
