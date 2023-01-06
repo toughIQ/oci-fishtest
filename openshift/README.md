@@ -12,3 +12,4 @@ The secret `name` `fishtest` is referred in the provided `deployment.yaml`. So i
 # Deployment
 `oc apply -f deployment.yaml`
 
+Since the used OCI container is configured by `default` to use 1 CPU core. scaling should be done via upscaling the deployment and not increasing the cores within one pod. So you can better scale according to your needs and resources. 
