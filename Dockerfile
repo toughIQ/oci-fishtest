@@ -8,7 +8,7 @@ WORKDIR /fishtest
 RUN git clone https://github.com/glinscott/fishtest.git
 
 RUN chgrp -R 0 /fishtest && \
-    chmod -R g=u /fishtest
+    chmod -R 775 /fishtest
 
 USER fishtest
 
