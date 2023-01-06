@@ -1,6 +1,8 @@
 # oci-fishtest
 StockFish fishtest worker - Chess
 
+Project: https://github.com/glinscott/fishtest
+
 ## OCI engine
 I used `podman`, but you can use `docker` as well. Just use `docker` instead of `podman` for the CLI commands. 
 
