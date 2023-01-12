@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/part-of: fishtest
     app.openshift.io/runtime: python
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: fishtest
